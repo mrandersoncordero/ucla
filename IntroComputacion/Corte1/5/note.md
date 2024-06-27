@@ -1,0 +1,2 @@
+## 5. CINES UNIDOS
+Cines Unidos necesita que se realice un programa que muestre el total recaudado en las 4 películas proyectadas, sabiendo el valor promedio pagado por los espectadores en cada película.
