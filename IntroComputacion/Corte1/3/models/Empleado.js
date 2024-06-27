@@ -1,15 +1,8 @@
-/**
- * EMPLEADO
-De un empleado se conocen los siguientes datos: nombre, sueldo base y años de servicio; el
-empleado recibirá un aumento del 15% de su sueldo base si tiene más de 5 años de servicio.
-Desarrolle un programa que muestre el nombre, el aumento y el nuevo sueldo del empleado.
- */
-
-class Empleado {
+export default class Empleado {
   constructor(nombre, sueldo_base, anios_de_servicio) {
     this._nombre = nombre;
-    this._sueldo_base = sueldo_base;
-    this._anios_de_servicio = anios_de_servicio;
+    this._sueldo_base = parseInt(sueldo_base);
+    this._anios_de_servicio = parseInt(anios_de_servicio);
   }
 
   get nombre() {
@@ -49,15 +42,3 @@ class Empleado {
     return texto;
   }
 }
-
-
-let empleado = new Empleado('Luis', 1600, 5);
-console.log('-'.repeat(20));
-console.log(empleado.salida());
-
-empleado.nombre = 'Ana';
-empleado.sueldo_base = 2000;
-empleado.anios_de_servicio = 7
-
-console.log('-'.repeat(20));
-console.log(empleado.salida());
