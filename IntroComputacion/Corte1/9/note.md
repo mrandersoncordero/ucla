@@ -1,0 +1,2 @@
+## 9. CUADRE DE CAJA REGISTRADORA
+Crear un programa de cierre de caja para totalizar el efectivo en billetes de USD dentro de la caja. Los billetes a contabilizar son de denominaciones de 1 USD, 5 USD, 10 USD, 20 USD, 50 USD y 100 USD. El programa debe obtener y mostrar un resumen con el monto total por cada tipo de billete y el monto total del cierre de caja.
