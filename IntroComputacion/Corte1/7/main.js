@@ -1,15 +1,14 @@
 import CinesUnidos from "./models/CinesUnidos.js";
+import ICinesUnidos from "./models/ICinesUnidos.js";
 
-const monto1 = prompt('Ingresa el monto1: ')
-const monto2 = prompt('Ingresa el monto2: ')
-const monto3 = prompt('Ingresa el monto3: ')
-const monto4 = prompt('Ingresa el monto4: ')
+let iCinesUnidos = new ICinesUnidos(),
+    monto1 = prompt('Ingresa el monto1: '),
+    monto2 = prompt('Ingresa el monto2: '),
+    monto3 = prompt('Ingresa el monto3: '),
+    monto4 = prompt('Ingresa el monto4: '),
 
-let cinesUnidos = new CinesUnidos(monto1, monto2, monto3, monto4);
+    cinesUnidos = new CinesUnidos(monto1, monto2, monto3, monto4),
 
+    mostrarReporte = document.querySelector('#reporte');
 
-let mostrarReporte = document.querySelector('#reporte');
-
-let reporte = `Total recaudado: $${cinesUnidos.totalRecaudado()}`;
-
-mostrarReporte.innerText = reporte
+mostrarReporte.innerText = iCinesUnidos.salida(cinesUnidos.totalRecaudado())
