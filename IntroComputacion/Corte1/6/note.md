@@ -1,0 +1,2 @@
+## 6. UN PROFESOR UNIVERSITARIO
+Un profesor Universitario, recibirá una prima de acuerdo a su **categoría** (1.Instructor,2.Asistente, 3.Agregado, 4.Asociado, 5.Titular). Del profesor se conoce: **cédula**, **categoría** y **sueldo**. El monto de la prima a recibir por el profesor, depende de su categoría y está sujeto a los porcentajes de la siguiente tabla:
