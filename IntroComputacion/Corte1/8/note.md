@@ -1,2 +1,2 @@
-## 8. LA PIZZERÍA
-Una pizzería tiene una promoción del 25% de descuento si el cliente compra más de 2 pizzas. El precio de las pizzas depende del tamaño: pequeña $5, mediana $10, grande $15. Se desea un programa que determine el monto a pagar por el cliente y también el monto del descuento, conociendo los siguientes datos: nombre, cantidad de pizzas y tamaño de la pizza (1=pequeña, 2=mediana, 3=grande)
+## 6. ESTUDIANTE APROBADO
+De un estudiante se conocen las 3 evaluaciones que presentó. Se requiere un programa que calcule y muestre la nota final, y además, indique si el estudiante está o no aprobado. Se sabe que el estudiante aprueba con un mínimo de 48 puntos

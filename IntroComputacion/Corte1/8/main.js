@@ -1,21 +1,20 @@
-// main.js
-import Pizzeria from "./models/Pizzeria.js";
+import Estudiante from "./models/Estudiante.js";
 
-const nombre = prompt('Ingresa el nombre del cliente: ');
-const cantidad = prompt('Ingresa la cantidad de pizzas: ');
-const tamanio = prompt('Ingresa el tamaño de las pizzas en números Pequeña[1], Mediana[2], Grande[3]: ');
 
-if (isNaN(cantidad) || isNaN(tamanio) || !['1', '2', '3'].includes(tamanio)) {
-  alert('Por favor, ingresa valores válidos para la cantidad y el tamaño.');
-} else {
-  let pizzeria = new Pizzeria(nombre, cantidad, tamanio);
+const nombre = prompt('Ingresa el nombre del estudiante: ');
+const apellido = prompt('Ingresa el apellido del estudiante: ');
+const cedula = prompt('Ingresa el cedula del estudiante: ');
+const nota1 = prompt('Ingresa la primera nota(1) del estudiante ');
+const nota2 = prompt('Ingresa la primera nota(2) del estudiante ');
+const nota3 = prompt('Ingresa la primera nota(3) del estudiante ');
 
-  let mostrarReporte = document.getElementById('reporte');
+let estudiante = new Estudiante(nombre, apellido, cedula, nota1, nota2, nota3);
 
-  let reporte = `
-    Monto del descuento: $${pizzeria.calcularDescuento().toFixed(2)}
-    Monto a pagar: $${pizzeria.calcularMonto().toFixed(2)}
-  `;
+let mostrarReporte = document.querySelector('#reporte');
 
-  mostrarReporte.innerText = reporte;
-}
+let reporte = `
+  Nota Final: ${estudiante.sumarNotas()}
+  Resultado: ${estudiante.aprobado() ? 'APROBADO' : 'NO APROBADO'}
+`;
+
+mostrarReporte.innerText = reporte;

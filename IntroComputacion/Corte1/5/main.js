@@ -1,15 +1,17 @@
-import CinesUnidos from "./models/CinesUnidos.js";
+import Asegurado from "./models/Asegurado.js";
+import IAsegurado from "./models/IAsegurado.js";
 
-const monto1 = prompt('Ingresa el monto1: ')
-const monto2 = prompt('Ingresa el monto2: ')
-const monto3 = prompt('Ingresa el monto3: ')
-const monto4 = prompt('Ingresa el monto4: ')
+const estados_permitidos = ['1', '2', '3', '4', '5'];
+let iAsegurado = new IAsegurado(),
+    cedula = iAsegurado.leerCedula(),
+    estado_civil = iAsegurado.leerEstadoCivil(),
+    monto = iAsegurado.leerMonto();
 
-let cinesUnidos = new CinesUnidos(monto1, monto2, monto3, monto4);
+if (!estados_permitidos.includes(estado_civil)) {
+  alert('Ingresa un dígito del 1 al 5 para el estado civil');
+} else {
+  let asegurado = new Asegurado(cedula, estado_civil, monto),
+      reporte = document.querySelector('#reporte');
 
-
-let mostrarReporte = document.querySelector('#reporte');
-
-let reporte = `Total recaudado: $${cinesUnidos.totalRecaudado()}`;
-
-mostrarReporte.innerText = reporte
+  reporte.innerText = iAsegurado.salida(cedula, asegurado.calcularMontoAAsegurar(parseInt(estado_civil)));
+}

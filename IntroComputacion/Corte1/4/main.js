@@ -1,18 +1,14 @@
 import Producto from "./models/Producto.js";
+import IProducto from "./models/IProducto.js";
 
-let codigo = prompt('Ingresa el codigo del producto: ')
-let costo = prompt('Ingresa el costo del producto: ')
-let tipo = prompt('Ingresa el tipo del producto en numeros Dama[1] Caballero[2] Nino[3]: ')
 
-let producto = new Producto(codigo, costo, tipo)
+let iProducto = new IProducto(),
+    codigo = iProducto.leerCodigo(),
+    costo = iProducto.leerCosto(),
+    tipo = iProducto.leerTipo(),
 
-let mostratReporte = document.getElementById('reporte')
+    producto = new Producto(codigo, costo, tipo),
 
-let reporte = `
-  Codigo: ${producto.codigo}
-  Precio base de venta: $${producto.costo}
-  Descuento: $${producto.descuento()}
-  Precio final: $${producto.costo - producto.descuento()}
-`;
+    mostratReporte = document.getElementById('reporte');
 
-mostratReporte.innerText = reporte
+    mostratReporte.innerText = iProducto.mostrarReporte(codigo, costo, producto.descuento(), producto.costo - producto.descuento())

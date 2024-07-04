@@ -1,2 +1,0 @@
-## 6. ESTUDIANTE APROBADO
-De un estudiante se conocen las 3 evaluaciones que presentó. Se requiere un programa que calcule y muestre la nota final, y además, indique si el estudiante está o no aprobado. Se sabe que el estudiante aprueba con un mínimo de 48 puntos

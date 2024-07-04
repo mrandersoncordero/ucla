@@ -1,2 +1,2 @@
-## 5. CINES UNIDOS
-Cines Unidos necesita que se realice un programa que muestre el total recaudado en las 4 películas proyectadas, sabiendo el valor promedio pagado por los espectadores en cada película.
+## 5. UN ASEGURADO
+Un asegurado contrata una póliza de Seguro de Vida. Los datos del asegurado son: **cédula, estado civil (1.Soltero, 2.Casado, 3.Divorciado, 4.Viudo, 5.Concubino)** y **monto a asegurar**. Se sabe que el monto de la póliza es un porcentaje sobre el monto a asegurar, que depende del estado civil y está sujeto a los porcentajes de la siguiente tabla:
