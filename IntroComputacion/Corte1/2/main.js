@@ -1,16 +1,12 @@
 import Vendedor from "./models/Vendedor.js";
+import IVendedor from "./models/IVendedor.js";
 
-const cedula = prompt('Ingresa la cedula del vendedor: ')
-const monto = prompt('Ingresa la monto: ')
+let iVendedor = new IVendedor(),
+    cedula = iVendedor.leerCedula(),
+    monto = iVendedor.leerMonto(),
 
-let vendedor = new Vendedor(cedula, monto)
+    vendedor = new Vendedor(cedula, monto),
 
+    mostrarReporte = document.querySelector('#reporte');
 
-let mostrarReporte = document.querySelector('#reporte');
-
-let reporte = `
-  Cedula del vendedor: ${vendedor.cedula}
-  Monto por comisión: $${vendedor.montoPorComision()}
-`;
-
-mostrarReporte.innerText = reporte;
+mostrarReporte.innerText = iVendedor.mostrarReporte(vendedor.cedula, vendedor.montoPorComision());

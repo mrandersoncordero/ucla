@@ -1,23 +1,16 @@
 import Estudiante from "./models/Estudiante.js";
+import IEstudiante from "./models/IEstudiante.js";
 
-
-const nombre = prompt('Ingresa el nombre del estudiante: ');
-const apellido = prompt('Ingresa el apellido del estudiante: ');
-const cedula = prompt('Ingresa el cedula del estudiante: ');
-const nota1 = prompt('Ingresa la primera nota(1) del estudiante ');
-const nota2 = prompt('Ingresa la primera nota(2) del estudiante ');
-const nota3 = prompt('Ingresa la primera nota(3) del estudiante ');
+let iEmpleado = new IEstudiante(),
+    nombre = iEmpleado.leerNombre(),
+    apellido = iEmpleado.leerApellido(),
+    cedula = iEmpleado.leerCedula(),
+    nota1 = iEmpleado.leerNota1(),
+    nota2 = iEmpleado.leerNota2(),
+    nota3 = iEmpleado.leerNota3();
 
 let estudiante = new Estudiante(nombre, apellido, cedula, nota1, nota2, nota3);
 
 let mostrarReporte = document.querySelector('#reporte');
 
-let reporte = `
-  Cedula: ${estudiante.cedula}
-  Nota 1: ${estudiante.nota1}
-  Nota 2: ${estudiante.nota2}
-  Nota 3: ${estudiante.nota3}
-  Nota Final: ${estudiante.sumarNotas()}
-`;
-
-mostrarReporte.innerText = reporte;
+mostrarReporte.innerText = iEmpleado.mostrarReporte(estudiante.cedula, estudiante.nota1, estudiante.nota2, estudiante.nota3, estudiante.sumarNotas());

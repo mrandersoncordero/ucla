@@ -1,17 +1,14 @@
 import Empleado from "./models/Empleado.js";
+import IEmpleado from "./models/IEmpleado.js";
 
-const nombre = prompt('Ingresa el nombre del empleado: ')
-const sueldo_base = prompt('Ingresa el sueldo base del empleado: ')
-const anios = prompt('Ingresa el anios de servicio del empleado: ')
+let iEmpleado = new IEmpleado(),
+    nombre = iEmpleado.leerNombre(),
+    sueldo_base = iEmpleado.leerSueldoBase(),
+    anios = iEmpleado.leerAnios(),
 
-let empleado = new Empleado(nombre, sueldo_base, anios);
+    empleado = new Empleado(nombre, sueldo_base, anios),
 
-let mostrarReporte = document.querySelector('#reporte');
+    mostrarReporte = document.querySelector('#reporte'),
+    nuevo_sueldo = empleado.aumento() + empleado.sueldo_base;
 
-let reporte = `
-  Nombre: ${empleado.nombre}
-  Aumento: $${empleado.aumento()}
-  Nuevo Sueldo: $${empleado.aumento() + empleado.sueldo_base}
-`;
-
-mostrarReporte.innerText = reporte;
+mostrarReporte.innerText = iEmpleado.mostrarReporte(nombre, empleado.aumento(), nuevo_sueldo);
