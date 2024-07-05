@@ -1,2 +1,2 @@
 ## 7. CUENTA BANCARIA
-Realice un programa que procese la siguiente información de una cuenta bancaria: el saldo inicial, el monto total de los depósitos y el monto total de los retiros. También se sabe que el banco cobra un 5% de comisión por el total de los retiros. Se requiere mostrar la comisión por retiros y el saldo final de la cuenta.
+Realice un programa que procese la siguiente información de una cuenta bancaria: el **saldo inicial**, el **monto total de los depósitos** y el **monto total de los retiros**. También se sabe que el banco cobra un **5% de comisión por el total de los retiros**. Se requiere mostrar la comisión por retiros y el saldo final de la cuenta.

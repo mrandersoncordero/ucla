@@ -33,4 +33,8 @@ export default class CuentaBancaria {
     let comision = this.montoTotalRetiro * .05;
     return comision;
   }
+
+  saldoFinal() {
+    return (this.saldoInicial + this.montoTotalDeposito) - this.montoTotalRetiro - this.comision()
+  }
 }

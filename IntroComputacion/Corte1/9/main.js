@@ -1,16 +1,16 @@
 import CuentaBancaria from "./models/CuentaBancaria.js";
+import ICuentaBancaria from "./models/ICuentaBancaria.js";
 
-const saldoInicial = prompt('Ingresa el saldo inicial: ')
-const deposito = prompt('Ingresa el monto Deposito: ')
-const retiro = prompt('Ingresa el monto Retiro: ')
+let iCuentaBancaria = new ICuentaBancaria(),
+    saldoInicial = iCuentaBancaria.leerSaldoInicial(),
+    deposito = iCuentaBancaria.leerDeposito(),
+    retiro = iCuentaBancaria.leerRetiro(),
 
-let cuentaBancaria = new CuentaBancaria(saldoInicial, deposito, retiro);
+    cuentaBancaria = new CuentaBancaria(saldoInicial, deposito, retiro),
 
-let mostrarReporte = document.querySelector('#reporte');
+    mostrarReporte = document.querySelector('#reporte');
 
-let reporte = `
-  Comision por retiros: $${cuentaBancaria.comision()}
-  Saldo final: $${(cuentaBancaria.saldoInicial + cuentaBancaria.montoTotalDeposito) - cuentaBancaria.montoTotalRetiro - cuentaBancaria.comision()}
-`;
+let comision = cuentaBancaria.comision();
+// let saldoFinal = (cuentaBancaria.saldoInicial + cuentaBancaria.montoTotalDeposito) - cuentaBancaria.montoTotalRetiro - cuentaBancaria.comision();
 
-mostrarReporte.innerText = reporte
+mostrarReporte.innerText = iCuentaBancaria.salida(comision, cuentaBancaria.saldoFinal())
